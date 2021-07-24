@@ -33,3 +33,51 @@ contenido.
 
 print('Ejercicios de práctica con cadenas')
 # Empezar aquí la resolución del ejercicio
+palabra1 = str(input('Ingrese la primer palabra:\n'))
+palabra2 = str(input('Ingrese la segunda palabra:\n'))
+palabra3 = str(input('Ingrese la tercer palabra:\n'))
+
+print('Ingrese una opcion para la forma de ordenar')
+print('Menu')
+print(' 1.- Ordenar alfabeticamente')
+print(' 2.- Ordenar por tamaño de palabra')
+
+menu = int(input('Ingrese un numero para elegir la forma de ordenar:\n'))
+
+
+if menu == 1:
+#ORDEN ALFABETICO
+
+    if ((palabra1 > palabra2) and (palabra2) > palabra3):
+        print('el orden alfabetico es: {}, {}, {}.'.format(palabra3, palabra2, palabra1))
+    elif((palabra1 > palabra3) and (palabra3 > palabra2)):
+        print('el orden alfabetico es: {}, {}, {}.'.format(palabra2, palabra3, palabra1))
+    elif ((palabra2 > palabra3) and (palabra3 > palabra1)):
+        print('el orden alfabetico es: {}, {}, {}.'.format(palabra1, palabra3, palabra2))
+    elif ((palabra2 > palabra1) and (palabra1 > palabra3)):
+        print('el orden alfabetico es: {}, {}, {}.'.format(palabra3, palabra1, palabra2))
+    elif ((palabra3 > palabra2) and (palabra2 > palabra1)):
+        print('el orden alfabetico es: {}, {}, {}.'.format(palabra1, palabra2, palabra3))
+    else:
+        print('el orden alafabetico es: {}, {}, {}.'.format(palabra2, palabra1, palabra3))
+        
+        
+elif menu == 2: #ORDEN POR TAMAÑO DE PALABRA
+
+    if (len(palabra1)) > len(palabra2) and (len(palabra2) > len(palabra3)):
+        print('el orden por tamaño de palabras es: {}, {}, {}'.format(palabra3, palabra2, palabra1))
+    elif (len(palabra1)) > len(palabra3) and (len(palabra3) > len(palabra2)):
+        print('el orden por tamaño de palabras es: {}, {}, {}'.format(palabra2, palabra3, palabra1))
+    elif (len(palabra2)) > len(palabra3) and (len(palabra3) > len(palabra1)):
+        print('el orden por tamaño de palabras es: {}, {}, {}'.format(palabra1, palabra3, palabra2))
+    elif (len(palabra2)) > len(palabra1) and (len(palabra1) > len(palabra3)):
+        print('el orden por tamaño de palabras es: {}, {}, {}'.format(palabra3, palabra1, palabra2))
+    elif (len(palabra3)) > len(palabra2) and (len(palabra2) > len(palabra1)):
+        print('el orden por tamaño de palabras es: {}, {}, {}'.format(palabra1, palabra2, palabra3))
+    else:
+        print('el orden por tamaño de palabras es: {}, {}, {}'.format(palabra2, palabra1, palabra3))
+
+else:
+    print('usted no ha ingresado una opcion de menu Válida.-')
+
+

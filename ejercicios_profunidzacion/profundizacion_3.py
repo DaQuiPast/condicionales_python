@@ -30,3 +30,25 @@ contenido. Recomendamos pensar bien este problema de lógica con un lápiz y pap
 
 print('Ejercicios de práctica con números')
 # Empezar aquí la resolución del ejercicio
+
+temperatura1 = float(input('Ingrese la primer temperatura:\n'))
+temperatura2 = float(input('Ingrese la segunda temperatura:\n'))
+
+#CALCULO DE LA TEMPERATURA MINIMA
+
+if temperatura1 > temperatura2: 
+    print(('la temperatura minima es {}').format(temperatura2))
+else:
+    print(('la temperatura minima es {}').format(temperatura1))
+    
+#CALCULO DE LA TEMPERATURA MAXIMA
+
+if temperatura1 < temperatura2:
+    print(('la temperatura Máxima es {}').format(temperatura2))
+else:
+    print(('la temperatura Máxima es {}').format(temperatura1))
+    
+#CALCULO DEL PROMEDIO DE LAS DOS TEMPERATURAS.
+
+promedio = (temperatura1 + temperatura2) / 2
+print('El promedio de las dos temperaturas es {}'.format(promedio))
